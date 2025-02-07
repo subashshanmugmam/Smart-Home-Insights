@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Chart Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Live Environmental Data Visualization</h1>
+        <div class="controls">
+            <label for="chartType">Select Chart Type:</label>
+            <select id="chartType">
+                <option value="line">Line Chart</option>
+                <option value="bar">Bar Chart</option>
+                <option value="pie">Pie Chart</option>
+            </select>
+        </div>
+        <div class="charts">
+            <canvas id="chart1"></canvas>
+            <canvas id="chart2"></canvas>
+        </div>
+    </div>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .controls {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        select {
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+        
+        .charts {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        canvas {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        
+    </style>
+    <script src="script.js"></script>
+</body>
+</html>
